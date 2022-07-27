@@ -1,0 +1,19 @@
+application:
+  jwt:
+    secretKey: ${JWT_SECRET}
+    tokenPrefix: 'Bearer '
+    tokenExpirationAfterDays: 14
+
+spring:
+  profiles:
+    active: @spring.profiles.active@
+
+server:
+  port: 8080
+
+app:
+  datasource:
+    jdbc-url: ${POSTGRESQL_URL}
+    username: ${POSTGRESQL_USERNAME}
+    password: ${POSTGRESQL_PASSWORD}
+    pool-size: 30
